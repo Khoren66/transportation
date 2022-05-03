@@ -1,12 +1,13 @@
 import { call, put } from "redux-saga/effects";
-import { setDelivery } from "../../reducers/deliveries";
-import { requestGetDelivery } from "../requests/delivery";
+import { setDeliveries } from "../../reducers/deliveries";
+import { requestGetDeliveries } from "../requests/delivery";
 
-export function* handleGetDelivery(action) {
+export function* handleGetDeliveries(action) {
   try {
-    const response = yield call(requestGetDelivery);
+    const response = yield call(requestGetDeliveries);
+    // console.log(response, "RESPONSE, IN HANDLER");
     const { data } = response;
-    yield put(setDelivery(data));
+    yield put(setDeliveries(data));
   } catch (error) {
     console.log(error);
   }

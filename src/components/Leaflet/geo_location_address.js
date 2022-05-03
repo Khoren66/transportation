@@ -1,6 +1,6 @@
 import Geocode from "react-geocode";
 
-Geocode.setApiKey("AIzaSyAvktpXQBCWnddLPWfLubqM8qEJXYFcSrQ");
+Geocode.setApiKey("AIzaSyDFUlDd0W5XoHzSJjyPLmt0ifSstvQg4Qk");
 
 // set response language. Defaults to english.
 Geocode.setLanguage("en");
@@ -17,13 +17,13 @@ Geocode.setRegion("am");
 Geocode.setLocationType("ROOFTOP");
 
 // Enable or disable logs. Its optional.
-Geocode.enableDebug();
+// Geocode.enableDebug();
 
 // Get formatted address, city, state, country from latitude & longitude when
 // Geocode.setLocationType("ROOFTOP") enabled
 // the below parser will work for most of the countries
 export const getAddressByLatLng = (location) => {
-  Geocode.fromLatLng(...location).then((response) => {
+  return Geocode.fromLatLng(...location).then((response) => {
     // console.log(response.results[0].formatted_address);
     return response.results[0].formatted_address;
   });

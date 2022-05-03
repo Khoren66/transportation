@@ -7,12 +7,12 @@ import { getAddressByLatLng, getLatLngByAddress } from "./geo_location_address";
 import { addressSearchProvider } from "../AplicationsList/address_search_provider";
 
 const LeafletMap = () => {
-  const centerPosition = [40.17724430532858, 44.51706178235342];
+  const centerPosition = [55.7504461, 37.6174943];
   const startPoint = [40.17724430532858, 44.51706178235342];
   const endPoint = [40.07724430532858, 44.51706178235342];
 
   useEffect(() => {
-    getAddressByLatLng(centerPosition);
+    // getAddressByLatLng(centerPosition);
     getLatLngByAddress("Վարդանանց փողոց, Նուբարաշենի խճուղի");
   }, []);
 

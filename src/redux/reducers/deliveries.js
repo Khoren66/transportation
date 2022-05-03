@@ -1,24 +1,24 @@
-export const GET_DELIVERY = "GET_DELIVERY";
-const SET_DELIVERY = "SET_DELIVERY";
+export const GET_DELIVERIES = "GET_DELIVERIES";
+const SET_DELIVERIES = "SET_DELIVERIES";
 
-export const getDelivery = () => ({
-  type: GET_DELIVERY,
+export const getDeliveries = () => ({
+  type: GET_DELIVERIES,
 });
 
-export const setDelivery = (delivery) => ({
-  type: SET_DELIVERY,
-  delivery,
+export const setDeliveries = (deliveries) => ({
+  type: SET_DELIVERIES,
+  deliveries,
 });
 
 const initialState = {
-  delivery: undefined,
+  deliveries: [],
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_DELIVERY:
-      const { delivery } = action;
-      return { ...state, delivery };
+    case SET_DELIVERIES:
+      const { deliveries } = action;
+      return { ...state, deliveries };
     default:
       return state;
   }

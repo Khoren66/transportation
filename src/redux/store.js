@@ -4,7 +4,7 @@ import deliveryReducer from "./reducers/deliveries";
 import { watcherSaga } from "./sagas/rootSaga";
 
 const reducer = combineReducers({
-  delivery: deliveryReducer,
+  deliveriesList: deliveryReducer,
 });
 
 const sagaMiddleware = createSagaMiddleware();
